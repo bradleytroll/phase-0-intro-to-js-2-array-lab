@@ -1,1 +1,37 @@
-// Write your solution here!
+let cats = ["Milo", "Otis", "Garfield"];
+    // It's appeneding a cat to the end of an array destructively.
+function destructivelyAppendCat(name) {
+        cats.push(name);
+        console.log("Hello there",name)
+    }
+function destructivelyPrependCat(name) {
+        cats.unshift(name);
+}
+function destructivelyRemoveLastCat(name) {
+        cats.pop(name);
+}
+function destructivelyRemoveFirstCat(name) {
+        cats.shift(name);
+}
+
+function appendCat(name) {
+        let newArray = [...cats, name];
+        return newArray;
+}
+
+function prependCat(name) {
+        let newerArray = [name, ...cats];
+        return newerArray;
+}
+function removeLastCat(name) {
+        let newRemove = cats.slice(0, - 1);
+        return newRemove; 
+}   
+function removeLastCat(name) {
+    let newRemove = cats.slice(0, cats.length - 1);
+    return newRemove; 
+}   
+function removeFirstCat(name) {
+    let newerRemove = cats.slice(1);
+    return newerRemove;
+}
